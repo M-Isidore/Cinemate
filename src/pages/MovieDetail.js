@@ -13,7 +13,7 @@ export const MovieDetail = () => {
   useEffect(() => {
     async function fetchMovie() {
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/${params.id}`,
+        `${process.env.REACT_APP_HOST}/movie/${params.id}`,
         {
           headers: {
             Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDVlMDU5MjYzNWVhMzc3NjM5MjU4YTZhNTIwMDZhOCIsIm5iZiI6MTczNzMxNDU0OS43MDUsInN1YiI6IjY3OGQ1MGY1OWQ1ZTM2M2QxOTY0ZDYwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9vZz45rZaIonu8nYFdzRJ9WhvJsyC3YIpG0qgBWnNKw`,
